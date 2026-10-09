@@ -27,24 +27,24 @@ Email: tirenioluwaodunlami@gmail.com
 # Projects
 // Each project starts with ## and its title. Copy a whole block to add one. Newest first.
 
-## Trailhead
+## Annotate
 Year: 2026
-Summary: Offline-first hiking planner with shared routes and live trail conditions.
-Stack: React, TypeScript, PostgreSQL
-Live: https://example.com
-Source: https://github.com/yourname/trailhead
-Problem: Hikers lost signal mid-route and had no map.
-What I built: A sync layer that caches routes and merges edits when back online.
-Result: 40k
-Result label: routes saved offline
+Summary: Free online image editor
+Stack: HTML, CSS, JavaScript
+Live: 
+Source: https://github.com/tirenioluwaodunlami-code/Annotate
+Problem: 
+What I built: A free online tool where people can easily edit images uploaded with available tools and download it right after. It is all client side so no data is stored or used.
+Result:
+Result label: 
 
-## Ledgerly
-Year: 2025
-Summary: Invoicing tool for freelancers with automatic payment reminders.
-Stack: Next.js, Stripe, Node
-Live: https://example.com
-Source: https://github.com/yourname/ledgerly
-Problem: Freelancers chased late payments by hand.
-What I built: Scheduled reminders and one-click payment links.
-Result: -18 days
-Result label: average time to get paid
+## (Bible) Quiz Website
+Year: 2026
+Summary: Website used to host online Bible Quizes. Questions and answers can easily be edited without changing the main code.
+Stack: HTML, CSS, JavaScript
+Live: 
+Source: https://github.com/tirenioluwaodunlami-code/Bible-Quiz-Website-V1
+Problem: Lack of an easy way to edit online quizes and customise theem.
+What I built: A website where the questions and answers can be easily edited in a text document without editing th emain code.
+Result: 
+Result label: 
