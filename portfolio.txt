@@ -45,6 +45,17 @@ Stack: HTML, CSS, JavaScript
 Live: 
 Source: https://github.com/tirenioluwaodunlami-code/Bible-Quiz-Website-V1
 Problem: Lack of an easy way to edit online quizes and customise theem.
-What I built: A website where the questions and answers can be easily edited in a text document without editing th emain code.
+What I built: A website where the questions and answers can be easily edited in a text document without editing the main code.
+Result: 
+Result label: 
+
+## Hangman
+Year: 2026
+Summary: A simple text based Hangman game using python and a text document as a word bank.
+Stack: Python
+Live: 
+Source: https://github.com/tirenioluwaodunlami-code/my-first-project
+Problem: 
+What I built: A simple hangman game that uses a text document as a word bank which can be easily edited without making changes to the main code.
 Result: 
 Result label: 
