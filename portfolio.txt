@@ -15,14 +15,14 @@ Font: Bricolage Grotesque
 Page title: Your Name | Developer
 
 # Profile
-Name: Your Name
-Tagline: Full-stack developer building fast, accessible web apps. Currently open to contract work.
+Name: Tirenioluwa Odunlami
+Tagline: Aspiring Software Developer, creating projects to showcase skills in software development
 
 # Links
 // One per line as Label: address. Add or delete lines freely.
-GitHub: https://github.com/yourname
-LinkedIn: https://linkedin.com/in/yourname
-Email: you@example.com
+GitHub: https://github.com/tirenioluwaodunlami-code
+LinkedIn: https://www.linkedin.com/in/tirenioluwa-odunlami-9843992b5/
+Email: tirenioluwaodunlami@gmail.com
 
 # Projects
 // Each project starts with ## and its title. Copy a whole block to add one. Newest first.
