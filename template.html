@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>__TITLE__</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+<style>
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#eef1f4; --surface:#ffffff; --ink:#16212b; --muted:#5b6b79; --line:#d3dae1; --accent:#0b6e6e; --accent-ink:#ffffff; --tag:#e1ecec;
+  --font:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10171d;--surface:#18222b;--ink:#e8eef3;--muted:#92a3b1;--line:#2a3944;--accent:#4fc3c3;--accent-ink:#0a1418;--tag:#1f3238}}
+:root[data-theme="dark"]{--bg:#10171d;--surface:#18222b;--ink:#e8eef3;--muted:#92a3b1;--line:#2a3944;--accent:#4fc3c3;--accent-ink:#0a1418;--tag:#1f3238}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*:before,*:after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.55;font-size:17px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line);display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;padding:.6rem 1.25rem}
+.bar span{color:var(--muted);font-size:.9rem;margin-right:.25rem}
+.bar button,.filters button{font:inherit;font-size:.92rem;padding:.35rem .9rem;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--ink);cursor:pointer}
+.bar button[aria-pressed="true"],.filters button[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+main{max-width:1060px;margin:0 auto;padding:0 1.25rem 4rem}
+header.hero{padding:4.5rem 0 2.5rem;max-width:760px}
+h1{font-size:clamp(2.6rem,8vw,5rem);line-height:1;letter-spacing:-.03em;font-weight:800;margin:0 0 1rem}
+.hero p{font-size:1.2rem;color:var(--muted);margin:0 0 1.25rem;max-width:56ch}
+.links{display:flex;gap:1.25rem;flex-wrap:wrap}
+.links a{font-weight:600;text-decoration-thickness:2px;text-underline-offset:4px;text-decoration-color:var(--accent)}
+h2{font-size:1.1rem;margin:2.5rem 0 1rem;color:var(--muted);font-weight:600}
+.filters{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.25rem}
+.tags{display:flex;gap:.4rem;flex-wrap:wrap;margin:.5rem 0 0;padding:0;list-style:none}
+.tags li{background:var(--tag);font-size:.82rem;padding:.1rem .6rem;border-radius:6px}
+.muted{color:var(--muted)}
+
+/* Template A: cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1.25rem}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.thumb{height:140px;display:flex;align-items:flex-end;padding:1rem;font-weight:800;font-size:2rem;letter-spacing:-.02em;color:var(--accent-ink);background:var(--accent)}
+.card:nth-child(3n+2) .thumb{background:#2b3f52;color:#fff}
+.card:nth-child(3n) .thumb{background:#b8d8d8;color:#16212b}
+.card .body{padding:1.1rem 1.2rem 1.3rem;display:flex;flex-direction:column;flex:1}
+.card h3{margin:0 0 .3rem;font-size:1.25rem}
+.card p{margin:0;color:var(--muted);font-size:.97rem}
+.card .links{margin-top:auto;padding-top:1rem;font-size:.95rem}
+
+/* Template B: index list */
+.index{border-top:1px solid var(--ink)}
+.row{display:grid;grid-template-columns:3.5rem 1.4fr 2fr auto;gap:1rem;align-items:baseline;padding:1.1rem 0;border-bottom:1px solid var(--line)}
+.row:hover{background:var(--surface)}
+.row .yr{color:var(--muted)}
+.row h3{margin:0;font-size:1.3rem}
+.row p{margin:0;color:var(--muted);font-size:.97rem}
+.row a{font-weight:600;white-space:nowrap}
+@media(max-width:700px){.row{grid-template-columns:1fr;gap:.3rem}}
+
+/* Template C: case studies */
+.case{display:grid;grid-template-columns:1fr 1fr;gap:2rem;padding:2.5rem 0;border-bottom:1px solid var(--line)}
+.case:nth-child(even) .visual{order:2}
+.visual{background:var(--surface);border:1px solid var(--line);border-radius:14px;min-height:240px;display:flex;align-items:center;justify-content:center;text-align:center;padding:1.5rem}
+.visual strong{font-size:3.2rem;line-height:1;letter-spacing:-.03em;color:var(--accent);display:block}
+.visual small{color:var(--muted);font-size:.95rem}
+.case h3{font-size:1.8rem;margin:0 0 .6rem;letter-spacing:-.01em}
+.case dl{margin:1rem 0 0}
+.case dt{font-weight:600;margin-top:.7rem}
+.case dd{margin:0;color:var(--muted)}
+@media(max-width:760px){.case{grid-template-columns:1fr}.case:nth-child(even) .visual{order:0}}
+.tip{margin-top:3rem;padding:1rem 1.2rem;border:1px dashed var(--line);border-radius:10px;color:var(--muted);font-size:.95rem}
+@media(prefers-reduced-motion:no-preference){main{animation:in .4s ease-out}@keyframes in{from{opacity:0}to{opacity:1}}}
+</style>
+<!--__HEAD__-->
+</head>
+<body>
+<nav class="bar" aria-label="Template switcher">
+  <span>Layout:</span>
+  <button data-t="cards" aria-pressed="true">Project cards</button>
+  <button data-t="index" aria-pressed="false">Index list</button>
+  <button data-t="cases" aria-pressed="false">Case studies</button>
+</nav>
+<main>
+  <header class="hero">
+    <h1 id="name"></h1>
+    <p id="tagline"></p>
+    <div class="links" id="contact"></div>
+  </header>
+  <section id="view" aria-live="polite"></section>
+</main>
+
+<script>
+const SITE = /*__SITE__*/{};
+
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const tags = p => `<ul class="tags">${p.stack.map(t=>`<li>${esc(t)}</li>`).join('')}</ul>`;
+const lnk = p => [p.live && `<a href="${esc(p.live)}">Live demo</a>`, p.code && `<a href="${esc(p.code)}">Source</a>`].filter(Boolean).join('');
+let filter = 'All';
+
+const views = {
+  cards(){
+    const all = ['All', ...new Set(SITE.projects.flatMap(p=>p.stack))];
+    const list = SITE.projects.filter(p => filter==='All' || p.stack.includes(filter));
+    return `<h2>Selected projects</h2>
+    <div class="filters" role="group" aria-label="Filter by technology">${all.map(t=>`<button data-f="${esc(t)}" aria-pressed="${t===filter}">${esc(t)}</button>`).join('')}</div>
+    <div class="grid">${list.map(p=>`<article class="card"><div class="thumb">${esc(p.title)}</div><div class="body"><h3>${esc(p.title)}</h3><p>${esc(p.summary)}</p>${tags(p)}<div class="links">${lnk(p)}</div></div></article>`).join('')}</div>`;
+  },
+  index(){
+    return `<h2>All work</h2><div class="index">${SITE.projects.map(p=>`<article class="row"><span class="yr">${p.year}</span><div><h3>${esc(p.title)}</h3>${tags(p)}</div><p>${esc(p.summary)}</p><a href="${esc(p.live||p.code)}">${p.live?'Visit':'View source'}</a></article>`).join('')}</div>`;
+  },
+  cases(){
+    return `<h2>Case studies</h2>${SITE.projects.map(p=>`<article class="case"><div class="visual"><div><strong>${esc(p.result)}</strong><small>${esc(p.resultLabel)}</small></div></div><div><h3>${esc(p.title)}</h3><p class="muted">${esc(p.summary)}</p>${tags(p)}<dl><dt>The problem</dt><dd>${esc(p.problem)}</dd><dt>What I built</dt><dd>${esc(p.built)}</dd></dl><div class="links" style="margin-top:1rem">${lnk(p)}</div></div></article>`).join('')}`;
+  }
+};
+let current = /*__LAYOUT__*/'cards';
+function render(){
+  $('#view').innerHTML = views[current]();
+  document.querySelectorAll('.bar button').forEach(b => b.setAttribute('aria-pressed', b.dataset.t===current));
+}
+$('#name').textContent = SITE.name;
+$('#tagline').textContent = SITE.tagline;
+$('#contact').innerHTML = SITE.links.map(l=>`<a href="${esc(l.url)}">${esc(l.label)}</a>`).join('');
+document.querySelector('.bar').addEventListener('click', e => { const t=e.target.closest('button'); if(t){current=t.dataset.t; filter='All'; render();} });
+$('#view').addEventListener('click', e => { const f=e.target.closest('[data-f]'); if(f){filter=f.dataset.f; render();} });
+render();
+</script>
+</body>
+</html>

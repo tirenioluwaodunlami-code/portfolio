@@ -1,0 +1,50 @@
+// Edit the text after each colon. Leave a value blank to use the default.
+// Lines starting with // are ignored. Keep the # headings and the labels as they are.
+
+# Settings
+// Layout: cards, index or cases.  Colour scheme: light, dark or auto.
+// Colours: hex codes (#0b6e6e) or names (teal).  Font: any Google Font name.
+Layout: cards
+Show layout switcher: no
+Colour scheme: auto
+Accent colour: #0b6e6e
+Background colour:
+Text colour:
+Card colour:
+Font: Bricolage Grotesque
+Page title: Your Name | Developer
+
+# Profile
+Name: Your Name
+Tagline: Full-stack developer building fast, accessible web apps. Currently open to contract work.
+
+# Links
+// One per line as Label: address. Add or delete lines freely.
+GitHub: https://github.com/yourname
+LinkedIn: https://linkedin.com/in/yourname
+Email: you@example.com
+
+# Projects
+// Each project starts with ## and its title. Copy a whole block to add one. Newest first.
+
+## Trailhead
+Year: 2026
+Summary: Offline-first hiking planner with shared routes and live trail conditions.
+Stack: React, TypeScript, PostgreSQL
+Live: https://example.com
+Source: https://github.com/yourname/trailhead
+Problem: Hikers lost signal mid-route and had no map.
+What I built: A sync layer that caches routes and merges edits when back online.
+Result: 40k
+Result label: routes saved offline
+
+## Ledgerly
+Year: 2025
+Summary: Invoicing tool for freelancers with automatic payment reminders.
+Stack: Next.js, Stripe, Node
+Live: https://example.com
+Source: https://github.com/yourname/ledgerly
+Problem: Freelancers chased late payments by hand.
+What I built: Scheduled reminders and one-click payment links.
+Result: -18 days
+Result label: average time to get paid
