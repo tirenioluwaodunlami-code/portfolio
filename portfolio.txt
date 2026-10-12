@@ -12,7 +12,7 @@ Background colour:
 Text colour:
 Card colour:
 Font: Bricolage Grotesque
-Page title: Your Name | Developer
+Page title: Tirenioluwa Odunlami | Developer Portfolio
 
 # Profile
 Name: Tirenioluwa Odunlami
